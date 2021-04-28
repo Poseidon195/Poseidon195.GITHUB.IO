@@ -6,7 +6,7 @@ body{
     margin:0px;
     padding: 0px;
 }
-   
+/* Text section */
 .header {
     height: 75vh;
     width: 100%;
@@ -28,11 +28,36 @@ body{
     padding: 30px;
     left:0px;
     height:100vh;
-    /* width:100%; */
     text-align:center;
     line-height:100px;
-    background-image: linear-gradient(Crimson, whitesmoke);
+    background-image: linear-gradient(crimson, whitesmoke);
   }
+
+  .main_helper {
+    background-color:whitesmoke;
+    height:75px;
+   
+  }
+
+  .main1 {
+    text-align:center;
+    line-height:0px;
+    padding:30px;
+    height:15vh;
+    font-size: 15px;
+    justify-content: center;
+    background-color: pink;
+    border-style: solid;
+    border-width: 0px;
+    border-color:whitesmoke;
+    outline: thick ridge gray;
+    outline-width: 10px;
+  }
+   
+  .main1:hover{
+    box-shadow: 20px 15px;
+  }
+/* NAV section */
 
   .nav {
     display: flex;
@@ -45,12 +70,12 @@ body{
     background-color:maroon;
     box-shadow: 0 2px 0 rgba(0);
     z-index: 10; 
-    color:maroon;
     font-family:georgia;
     line-height: 410%;
   }
 
   .nav-list {
+    color:maroon;
     display: flex;
     margin-right: 2rem;
     margin-top: flex;
@@ -71,7 +96,7 @@ body{
   .nav-list a {
     font-size: 1.5rem;
     padding: 2rem;
-    color:black;
+    color:blanchedalmond;
     text-decoration:none;
   }
 
@@ -80,63 +105,88 @@ body{
     color:white;
   }
 
-  .main_helper {
-    background-color:whitesmoke;
-    height:75px;
-   
-  }
 
-  .main1 {
-    /* width:100%; */
-    text-align:center;
-    line-height:0px;
-    padding:30px;
-    height:15vh;
-    font-size: 15px;
-    /* margin-right: 1rem; */
-    justify-content: center;
-    background-color:pink;
-    border-style: solid;
-    border-width: 25px;
-    border-color:whitesmoke;
-  }
+/* Project section */
 
-
-  .Gallery_helper {
-    background-color: whitesmoke;
-    height:50px;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    border-width:15px;
-  }
-  
-  .Gallery-Project {
-    text-align: center;
-    font-size: 50px;
-  }
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
     width: 100%;
-    height: auto;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
   }
   
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  
+  .code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .code {
+    color: #ff7f50;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  .btn-show-all {
+    font-size: 2rem;
+    background: var(--main-gray);
+    transition: background 0.3s ease-out;
+  }
+  
+  .btn-show-all:hover {
+    background: var(--main-red);
+  }
+  
+  .btn-show-all:hover > i {
+    transform: translateY(8px);
+  }
+  
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+  
+
   div.desc {
     padding: 15px;
     text-align: center;
   }
 
+/* Contact section */
 
   .contact-section {
     display: flex;
@@ -174,12 +224,39 @@ body{
   
   .contact-details {
     font-size: 2.4rem;
-    transition: transform 0.3s ease-out;
     text-decoration: none;
     color:whitesmoke;
+    transition: transform 0.3s ease-out;
   }
   
   .contact-details:hover {
     transform: translateY(8px);
+
+  }
+
+  /*Footer section*/
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--main-gray);
+    border-top: 4px solid var(--main-red);
+  }
+  
+  footer > p {
+    margin: 2rem;
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   
