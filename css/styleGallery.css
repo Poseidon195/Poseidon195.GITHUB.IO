@@ -45,34 +45,21 @@
   }
 
  /*Gallery*/
-
-  .Gallery_helper {
-    background-color: whitesmoke;
-    height:50px;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    border-width:15px;
-  }
   
   .Gallery-Project {
     text-align: center;
     font-size: 50px;
-
+    background-color:teal;
+    
   }
   div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
+    margin: 125px;
     float: left;
-    width: 180px;
-  }
+    width: 160px;
   
-  div.gallery:hover {
-    border: 1px solid #777;
   }
-  
   div.gallery img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 550px;
+    
   }
